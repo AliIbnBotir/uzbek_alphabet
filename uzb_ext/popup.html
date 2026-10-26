@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <title>O'zbek harflari</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="preload">
+  <header class="header">
+    <img class="logo" src="icons/icon-128.png" alt="">
+    <div class="title">
+      <h1>O'zbek harflari</h1>
+      <p class="status" id="status"><span class="dot"></span><span id="statusText"></span></p>
+    </div>
+    <input type="checkbox" role="switch" class="switch" id="enabled" aria-label="Avtomatik almashtirish">
+  </header>
+
+  <main id="main">
+    <section class="card site">
+      <img class="favicon" id="favicon" alt="">
+      <div class="site-info">
+        <span class="site-host" id="siteHost"></span>
+        <span class="site-hint" id="siteHint"></span>
+      </div>
+      <input type="checkbox" role="switch" class="switch small" id="siteEnabled" aria-label="Shu saytda ishlaydi">
+    </section>
+
+    <section>
+      <h2>Qoidalar</h2>
+      <div class="rules" id="rules"></div>
+    </section>
+
+    <section>
+      <h2><label for="demo">Sinab ko'ring</label></h2>
+      <textarea class="demo" id="demo" rows="2" spellcheck="false"
+                placeholder="shahar, o'zbek, choy, g'alaba…"></textarea>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="hint">
+      <span>Bekor qilish</span>
+      <span class="keys"><kbd>⌫</kbd> darhol</span>
+    </div>
+    <div class="hint">
+      <span>Yoqish / o'chirish</span>
+      <span class="keys"><kbd id="shortcut"></kbd><button class="link" id="editShortcut">O'zgartirish</button></span>
+    </div>
+    <div class="version" id="version"></div>
+  </footer>
+
+  <script src="rules.js"></script>
+  <script src="content.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
